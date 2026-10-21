@@ -30,3 +30,6 @@ Repositorio: https://github.com/david05klai/proyecto-skytrip
 
 ## Recursos
 Logo original extraído sin modificaciones de la página 2 del PDF del proyecto. Fotografías de Unsplash, identificadas en assets/SOURCES.md. Video de muestra: Big Buck Bunny, Blender Foundation, CC BY 3.0. Audio: composición instrumental original. Video de sustentación enlazado desde el PDF.
+
+## Diseño y movimiento
+Cabecera con emblema transparente, menú móvil nativo con details/summary, tipografías locales y composición responsive. Incluye entradas escalonadas, movimiento suave de la imagen principal, hover en botones y tarjetas y revelado al desplazarse cuando el navegador admite animation-timeline. Todas las animaciones son CSS y respetan prefers-reduced-motion. La estructura y las funciones de esta etapa siguen siendo HTML5 y CSS.

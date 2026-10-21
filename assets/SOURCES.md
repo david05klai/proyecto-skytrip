@@ -18,3 +18,6 @@ Referencias del contenido de destinos:
 - Colombia Travel: https://colombia.travel/es/cartagena-de-indias?page=1
 - Visit London: https://www.visitlondon.com/things-to-do/london-areas/south-bank
 - Indonesia Travel: https://www.indonesia.travel/uk/en/destination/bali-nusa-tenggara/bali/ubud---tegallalang-rice-terrace-a-charm-of-the-green-in-ubud
+
+Tipografías incluidas localmente: DM Sans, Manrope y Playfair Display, desde Google Fonts. Licencias OFL en assets/LICENSE-*.txt.
+Logo: el original del PDF se conserva en logo-skytrip.jpg; logo-emblema.png es su adaptación sin fondo para la cabecera y el pie de página.

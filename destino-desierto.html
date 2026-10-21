@@ -1,6 +1,137 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Proyecto SkyTrip: descubre destinos, compara alternativas y organiza tu itinerario."><meta name="theme-color" content="#050f45"><title>Ruta por el desierto · Proyecto SkyTrip</title><link rel="icon" href="assets/logo-skytrip.jpg"><link rel="stylesheet" href="styles.css"></head>
-<body><a class="skip" href="#contenido">Saltar al contenido</a>
-<header><a class="brand" href="index.html" aria-label="SkyTrip, inicio"><img src="assets/logo-skytrip.jpg" alt="Logo original SkyTrip: avión, ubicación, montañas y mar" width="100" height="100"></a><nav aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="explorar.html">Explorar destinos</a><a href="favoritos.html">Favoritos</a><a href="itinerario.html">Mi itinerario</a><a href="perfil.html">Perfil</a><a href="acerca.html">Acerca de</a></nav><a class="button small" href="itinerario.html">Crear mi viaje ↗</a></header>
-<main id="contenido"><section class="section compact"><a class="breadcrumb" href="explorar.html">← Volver a explorar destinos</a><div class="destination-hero"><img src="assets/desierto.jpg" alt="Paisaje de Ruta por el desierto"><div><p class="eyebrow">Ruta por definir · Aventura</p><h1>Ruta por el desierto</h1><p>Una propuesta de aventura entre paisajes de arena.</p><div class="actions"><a class="button" href="itinerario.html">Planear mi viaje ↗</a><a class="button secondary" href="favoritos.html">Elegir favoritos ♡</a></div></div></div><div class="detail-layout"><div><h2>Conoce el destino</h2><details open><summary>Información del destino</summary><p>Una propuesta de aventura entre paisajes de arena. Esta ficha es una propuesta inicial para organizar tu recorrido.</p><dl><div><dt>País o región</dt><dd>Ruta por definir</dd></div><div><dt>Experiencia</dt><dd>Aventura</dd></div></dl></details><details><summary>Clima y temporada</summary><p>Consulta el pronóstico y las condiciones de la temporada antes de fijar las fechas. Esta versión no consulta información meteorológica en vivo.</p></details><details><summary>Lugares de interés y actividades</summary><p>Idea de recorrido: contemplar las dunas, hacer una caminata guiada y observar el paisaje al atardecer. Esta ficha es una idea de experiencia; debes definir el destino y contratar los servicios con un operador local.</p></details><details><summary>Recomendaciones</summary><p>Define un presupuesto para transporte, alojamiento, alimentación y actividades. Consulta las condiciones de cada servicio con los proveedores correspondientes.</p></details></div><aside class="side-panel"><p class="eyebrow">ORGANIZA LO ESENCIAL</p><h3>Antes de salir</h3><ul><li>Fechas y duración del viaje.</li><li>Presupuesto y transporte.</li><li>Alojamiento y ubicación.</li><li>Actividades y descanso.</li></ul><a class="text-link" href="itinerario.html">Crear mi itinerario ↗</a></aside></div></section></main>
-<footer><div class="footer-top"><a href="index.html"><img src="assets/logo-skytrip.jpg" alt="SkyTrip" width="110" height="110"></a><div><strong>Tu próximo destino está en tus manos.</strong><p>Descubre, compara y organiza tu viaje en un solo lugar.</p></div><div><a href="index.html#galeria">Galería</a><a href="index.html#contacto">Contacto</a><a href="acerca.html">Sobre Nosotros</a></div><div><small>Redes de referencia</small><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div><div class="footer-bottom"><span>© 2026 Proyecto SkyTrip. Todos los derechos reservados.</span><span>Autores: Andrés Tavorda, Eliver Tiapa y Kleiner Madrid</span></div><small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small></footer></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Proyecto SkyTrip: descubre destinos, compara alternativas y organiza tu itinerario.">
+<meta name="theme-color" content="#f8fafb">
+<title>Ruta por el desierto · Proyecto SkyTrip</title>
+<link rel="icon" href="assets/logo-emblema.png">
+<link rel="stylesheet" href="styles.css?v=20261021-2">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+<a class="brand" href="index.html" aria-label="SkyTrip, inicio">
+<img src="assets/logo-emblema.png" alt="Emblema SkyTrip" width="58" height="58">
+<span class="brand-name">Sky<span>Trip</span>
+<small>EXPLORA A TU MANERA</small>
+</span>
+</a>
+<nav class="desktop-nav" aria-label="Navegación principal">
+<a href="index.html">Inicio</a>
+<a href="explorar.html">Destinos</a>
+<a href="favoritos.html">Favoritos</a>
+<a href="itinerario.html">Itinerario</a>
+<a href="perfil.html">Perfil</a>
+<a href="acerca.html">Nosotros</a>
+</nav>
+<details class="mobile-menu">
+<summary aria-label="Abrir menú de navegación">
+<span>
+</span>
+<span>
+</span>
+</summary>
+<nav aria-label="Navegación móvil">
+<a href="index.html">Inicio</a>
+<a href="explorar.html">Destinos</a>
+<a href="favoritos.html">Favoritos</a>
+<a href="itinerario.html">Itinerario</a>
+<a href="perfil.html">Perfil</a>
+<a href="acerca.html">Nosotros</a>
+</nav>
+</details>
+<a class="button small" href="itinerario.html">Planea tu viaje <span class="arrow">↗</span>
+</a>
+</header>
+<main id="contenido">
+<section class="section compact">
+<a class="breadcrumb" href="explorar.html">← Volver a explorar destinos</a>
+<div class="destination-hero">
+<img src="assets/desierto.jpg" alt="Paisaje de Ruta por el desierto">
+<div>
+<p class="eyebrow">Ruta por definir · Aventura</p>
+<h1>Ruta por el desierto</h1>
+<p>Una propuesta de aventura entre paisajes de arena.</p>
+<div class="actions">
+<a class="button" href="itinerario.html">Planear mi viaje ↗</a>
+<a class="button secondary" href="favoritos.html">Elegir favoritos ♡</a>
+</div>
+</div>
+</div>
+<div class="detail-layout">
+<div>
+<h2>Conoce el destino</h2>
+<details open>
+<summary>Información del destino</summary>
+<p>Una propuesta de aventura entre paisajes de arena. Esta ficha es una propuesta inicial para organizar tu recorrido.</p>
+<dl>
+<div>
+<dt>País o región</dt>
+<dd>Ruta por definir</dd>
+</div>
+<div>
+<dt>Experiencia</dt>
+<dd>Aventura</dd>
+</div>
+</dl>
+</details>
+<details>
+<summary>Clima y temporada</summary>
+<p>Consulta el pronóstico y las condiciones de la temporada antes de fijar las fechas. Esta versión no consulta información meteorológica en vivo.</p>
+</details>
+<details>
+<summary>Lugares de interés y actividades</summary>
+<p>Idea de recorrido: contemplar las dunas, hacer una caminata guiada y observar el paisaje al atardecer. Esta ficha es una idea de experiencia; debes definir el destino y contratar los servicios con un operador local.</p>
+</details>
+<details>
+<summary>Recomendaciones</summary>
+<p>Define un presupuesto para transporte, alojamiento, alimentación y actividades. Consulta las condiciones de cada servicio con los proveedores correspondientes.</p>
+</details>
+</div>
+<aside class="side-panel">
+<p class="eyebrow">ORGANIZA LO ESENCIAL</p>
+<h3>Antes de salir</h3>
+<ul>
+<li>Fechas y duración del viaje.</li>
+<li>Presupuesto y transporte.</li>
+<li>Alojamiento y ubicación.</li>
+<li>Actividades y descanso.</li>
+</ul>
+<a class="text-link" href="itinerario.html">Crear mi itinerario ↗</a>
+</aside>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-top">
+<a class="brand footer-brand" href="index.html" aria-label="SkyTrip, inicio">
+<img src="assets/logo-emblema.png" alt="Emblema SkyTrip" width="58" height="58">
+<span class="brand-name">Sky<span>Trip</span>
+<small>EXPLORA A TU MANERA</small>
+</span>
+</a>
+<div>
+<strong>Tu próximo destino está en tus manos.</strong>
+<p>Descubre, compara y organiza tu viaje en un solo lugar.</p>
+</div>
+<div>
+<a href="index.html#galeria">Galería</a>
+<a href="index.html#contacto">Contacto</a>
+<a href="acerca.html">Sobre Nosotros</a>
+</div>
+<div>
+<small>Redes de referencia</small>
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Proyecto SkyTrip. Todos los derechos reservados.</span>
+<span>Autores: Andrés Tavorda, Eliver Tiapa y Kleiner Madrid</span>
+</div>
+<small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
+</footer>
+</body>
+</html>
