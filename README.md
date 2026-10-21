@@ -12,7 +12,7 @@ Encabezado y navegación, hero, tres tarjetas, presentación del proyecto, galer
 El formulario usa validación nativa HTML5. Al enviar, recarga la página y muestra una nota mediante :target de CSS. Los campos no tienen atributo name, por lo que sus valores no se incluyen en la URL ni se envían ni almacenan. Las redes enlazan a las plataformas, sin cuentas oficiales de SkyTrip. No hay reservas, precios en vivo, cuentas de usuario. La tipografía y el video requieren conexión; las fotos y el audio están incluidos localmente.
 
 ## Créditos
-Autor: David. Concepto SkyTrip basado en el documento del proyecto. Fotografías: Unsplash (IDs originales en assets/SOURCES.md). Video: Big Buck Bunny, Blender Foundation, CC BY 3.0. Música: melodía original generada para el proyecto.
+Autores: Eliver Tiapa, Andres Tavorda y Kleiner David. Concepto SkyTrip basado en el documento del proyecto. Fotografías: Unsplash (IDs originales en assets/SOURCES.md). Video: Big Buck Bunny, Blender Foundation, CC BY 3.0. Música: melodía original generada para el proyecto.
 
 ## Hosting
 GitHub Pages sirve la rama main desde la raíz. Los cambios publicados en main actualizan el sitio.
