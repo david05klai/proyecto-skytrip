@@ -1,18 +1,32 @@
 # Proyecto SkyTrip
 
-Sitio responsive en español desarrollado con HTML5 y CSS exclusivamente, inspirado en el documento académico de SkyTrip.
+Prototipo académico desarrollado exclusivamente con HTML5 y CSS, basado en la definición del proyecto y el mapa del sitio del PDF proporcionado.
 
-## Ver el proyecto
-Abrir `index.html` o servir esta carpeta con un servidor estático. No requiere instalación ni compilación.
+## Autores
+Andrés Tavorda, Eliver Tiapa y Kleiner Madrid.
 
-## Contenido
-Encabezado y navegación, hero, tres tarjetas, presentación del proyecto, galería de seis imágenes con efecto hover CSS, video HTML5, audio local original, formulario con validación HTML5 y pie de página. Incluye diseño móvil, navegación por teclado y respeto por movimiento reducido.
+## Propuesta
+Centralizar información de destinos, transporte, alojamiento y actividades para comparar alternativas y organizar itinerarios según preferencias y presupuesto. Público: viajeros frecuentes, familias, parejas, estudiantes, grupos y viajeros con distintos presupuestos.
 
-## Límites de la demostración
-El formulario usa validación nativa HTML5. Al enviar, recarga la página y muestra una nota mediante :target de CSS. Los campos no tienen atributo name, por lo que sus valores no se incluyen en la URL ni se envían ni almacenan. Las redes enlazan a las plataformas, sin cuentas oficiales de SkyTrip. No hay reservas, precios en vivo, cuentas de usuario. La tipografía y el video requieren conexión; las fotos y el audio están incluidos localmente.
+## Pantallas del documento
+- Inicio: propuesta de valor, destinos destacados y acceso a planificación.
+- Explorar destinos: catálogo y filtros por categoría con CSS.
+- Detalle: información del destino, clima, lugares y recomendaciones en bloques desplegables HTML.
+- Favoritos: selección temporal de destinos en la misma página con casillas y CSS.
+- Mi itinerario: formulario de fechas, destino, presupuesto y preferencias, ejemplo de ruta y estado de viajes guardados.
+- Perfil: datos y preferencias mediante un formulario de muestra.
+- Acerca de: descripción, misión, visión, alcance y equipo.
 
-## Créditos
-Autores: Andrés Tavorda, Eliver Tiapa y Kleiner Madrid. Concepto SkyTrip basado en el documento del proyecto. Fotografías: Unsplash (IDs originales en assets/SOURCES.md). Video: Big Buck Bunny, Blender Foundation, CC BY 3.0. Música: melodía original generada para el proyecto.
+Se mantienen galería de seis imágenes, video y audio HTML5, contacto, efectos hover y diseño responsive.
 
-## Hosting
-GitHub Pages sirve la rama main desde la raíz. Los cambios publicados en main actualizan el sitio.
+## Alcance de esta etapa
+No contiene JavaScript, frameworks ni servicios de servidor. Los filtros y favoritos temporales utilizan CSS :has y :checked. La selección no se comparte entre páginas ni se almacena de forma permanente. Los formularios tienen validación HTML5; sus campos no llevan atributo name y sus valores no se envían ni se incluyen en la URL. Las confirmaciones usan CSS :target. El itinerario de ejemplo no se genera a partir de las entradas. La comparación de fechas es manual. No hay reservas, búsqueda en vivo, precios actuales, cuentas, alertas ni guardado. Son funciones propuestas para una etapa posterior. Las fichas son ejemplos de contenido; no ofrecen datos meteorológicos ni disponibilidad actual.
+
+## Abrir y publicar
+Abrir index.html en un navegador moderno. No requiere instalación ni compilación. GitHub Pages publica la rama main desde la raíz.
+
+Web: https://david05klai.github.io/proyecto-skytrip/
+Repositorio: https://github.com/david05klai/proyecto-skytrip
+
+## Recursos
+Logo original extraído sin modificaciones de la página 2 del PDF del proyecto. Fotografías de Unsplash, identificadas en assets/SOURCES.md. Video de muestra: Big Buck Bunny, Blender Foundation, CC BY 3.0. Audio: composición instrumental original. Video de sustentación enlazado desde el PDF.

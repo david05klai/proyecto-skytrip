@@ -12,4 +12,9 @@ Fotografías descargadas de images.unsplash.com, con identificadores:
 Video externo: https://media.w3.org/2010/05/bunny/trailer.mp4
 Big Buck Bunny © Blender Foundation | https://www.bigbuckbunny.org | CC BY 3.0 https://creativecommons.org/licenses/by/3.0/
 Audio ambiente.wav: composición instrumental original de muestra creada para SkyTrip.
-Logo: SVG original creado para esta entrega; no representa un registro de marca.
+Logo: imagen original extraída sin modificaciones de la página 2 del PDF del proyecto, guardada como logo-skytrip.jpg.
+
+Referencias del contenido de destinos:
+- Colombia Travel: https://colombia.travel/es/cartagena-de-indias?page=1
+- Visit London: https://www.visitlondon.com/things-to-do/london-areas/south-bank
+- Indonesia Travel: https://www.indonesia.travel/uk/en/destination/bali-nusa-tenggara/bali/ubud---tegallalang-rice-terrace-a-charm-of-the-green-in-ubud
