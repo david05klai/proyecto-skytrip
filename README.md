@@ -1,4 +1,4 @@
-# SkyTrip — Proyecto final
+# Proyecto SkyTrip
 
 Sitio responsive en español desarrollado con HTML5 y CSS exclusivamente, inspirado en el documento académico de SkyTrip.
 
