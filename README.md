@@ -1,6 +1,6 @@
 # Proyecto SkyTrip
 
-Prototipo académico desarrollado exclusivamente con HTML5 y CSS, basado en la definición del proyecto y el mapa del sitio del PDF proporcionado.
+Prototipo académico en HTML5 y CSS con un módulo JavaScript para el clima de los destinos, basado en la definición del proyecto y el mapa del sitio del PDF proporcionado.
 
 ## Autores
 Andrés Tavorda, Eliver Tiapa y Kleiner Madrid.
@@ -20,7 +20,7 @@ Centralizar información de destinos, transporte, alojamiento y actividades para
 Se mantienen galería de seis imágenes, video y audio HTML5, contacto, efectos hover y diseño responsive.
 
 ## Alcance de esta etapa
-No contiene JavaScript, frameworks ni servicios de servidor. Los filtros y favoritos temporales utilizan CSS :has y :checked. La selección no se comparte entre páginas ni se almacena de forma permanente. Los formularios tienen validación HTML5; sus campos no llevan atributo name y sus valores no se envían ni se incluyen en la URL. Las confirmaciones usan CSS :target. El itinerario de ejemplo no se genera a partir de las entradas. La comparación de fechas es manual. No hay reservas, búsqueda en vivo, precios actuales, cuentas, alertas ni guardado. Son funciones propuestas para una etapa posterior. Las fichas son ejemplos de contenido; no ofrecen datos meteorológicos ni disponibilidad actual.
+El sitio sigue siendo estático: no utiliza frameworks ni servicios de servidor. Las fichas de destino cargan un módulo JavaScript que consulta condiciones actuales y pronóstico de cinco días con Open-Meteo; cada ficha muestra una localidad de referencia y permite buscar otra ciudad. Los filtros y favoritos temporales utilizan CSS :has y :checked. La selección no se comparte entre páginas ni se almacena de forma permanente. Los formularios tienen validación HTML5; sus campos no llevan atributo name y sus valores no se envían ni se incluyen en la URL. Las confirmaciones usan CSS :target. El itinerario de ejemplo no se genera a partir de las entradas. La comparación de fechas es manual. No hay reservas, precios actuales, cuentas, alertas ni disponibilidad actual.
 
 ## Abrir y publicar
 Abrir index.html en un navegador moderno. No requiere instalación ni compilación. GitHub Pages publica la rama main desde la raíz.

@@ -113,3 +113,41 @@ header{position:sticky;top:0;z-index:30;height:88px;min-height:0;padding:0 5%;ga
 @media(max-width:700px){.hero-copy>.eyebrow{font-size:7px;letter-spacing:1.1px}.hero-copy>p:not(.eyebrow){font-size:12px}.hero h1{font-size:43px}.quick-start small{font-size:8px;letter-spacing:.7px}.quick-start strong{font-size:14px}.quick-start p{font-size:11px}.eyebrow{font-size:9px}.hero-caption{font-size:7px}.hero-postcard small{font-size:7px}.hero-postcard p{font-size:12px}.hero-coordinate{font-size:6px}.audio-panel .eyebrow{font-size:8px}.form-note{font-size:11px}.footer-bottom{font-size:9px}}
 @media(max-width:420px){.brand-name small{display:none}.brand-name{font-size:24px}.hero-copy>.eyebrow{font-size:6.5px}.hero-caption{font-size:6px}.hero-postcard small{font-size:6px}}
 @media(max-width:700px){.hero-postcard{display:none}input,textarea,select{font-size:16px}label{font-size:11px}.hero-caption{letter-spacing:1.1px}}
+
+
+/* Clima en vivo de las fichas de destino */
+.weather-widget{margin:0 20px 22px}
+.weather-intro{margin:0 0 13px;color:var(--muted);font-size:12px;line-height:1.55}
+.weather-status{margin:0 0 13px;padding:12px 14px;border-radius:10px;background:var(--paper);color:var(--muted);font-size:12px;line-height:1.55}
+.weather-status[data-state=success]{background:#edf7f3;color:#315b4d}
+.weather-status[data-state=error]{background:#fff2ef;color:#8d4036}
+.weather-retry{margin:-3px 0 14px;border:0;background:none;padding:0;color:var(--blue);font-size:12px;font-weight:700;text-decoration:underline;cursor:pointer}
+.weather-current[hidden],.weather-forecast[hidden],.weather-retry[hidden]{display:none}
+.weather-current:not([hidden]){display:grid;grid-template-columns:minmax(0,1.2fr) minmax(145px,1fr);gap:16px;align-items:center;margin:0 0 16px;padding:17px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+.weather-now-label{margin:0 0 3px;color:var(--muted);font-size:11px}
+.weather-now-temperature{margin:0;color:var(--ink);font:600 34px/1.2 Manrope,sans-serif;letter-spacing:-1.2px}
+.weather-now-condition{margin:3px 0 0;color:var(--muted);font-size:12px}
+.weather-metrics{display:grid;gap:9px}
+.weather-metrics p{display:flex;justify-content:space-between;gap:8px;margin:0;padding-bottom:7px;border-bottom:1px solid var(--line);font-size:11px;line-height:1.4}
+.weather-metrics p:last-child{padding-bottom:0;border-bottom:0}
+.weather-metrics span{color:var(--muted)}
+.weather-metrics strong{color:var(--ink);font-weight:700;text-align:right}
+.weather-forecast{margin:0 0 16px}
+.weather-forecast h3{margin:0 0 9px;font-size:15px}
+.weather-forecast-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:0;padding:0;list-style:none}
+.weather-forecast-list li{min-width:0;padding:10px 8px;background:white;border:1px solid var(--line);border-radius:10px;text-align:center}
+.weather-day{margin:0 0 4px;color:var(--ink);font-size:10px;font-weight:700;text-transform:capitalize}
+.weather-icon{display:block;margin-bottom:3px;font-size:20px;line-height:1.2}
+.weather-forecast-condition{min-height:32px;margin:0 0 5px;color:var(--muted);font-size:9px;line-height:1.35}
+.weather-forecast-temperatures{display:block;color:var(--ink);font-size:10px;white-space:nowrap}
+.weather-forecast-rain{display:block;margin-top:3px;color:var(--muted);font-size:9px}
+.weather-search{margin-top:5px;padding-top:14px;border-top:1px solid var(--line)}
+.weather-search label{display:block;margin-bottom:5px;color:var(--ink);font-size:12px;font-weight:700}
+.weather-search>div{display:flex;gap:8px}
+.weather-search input{flex:1;min-width:0;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);font-size:12px}
+.weather-search button{flex-shrink:0}
+.weather-search button:disabled{opacity:.65;cursor:wait}
+.weather-search small{display:block;margin-top:6px;color:var(--muted);font-size:10px}
+.weather-attribution{margin:13px 0 0;color:var(--muted);font-size:9px;line-height:1.5}
+.weather-attribution a{color:var(--blue);text-decoration:underline}
+@media(max-width:760px){.weather-current:not([hidden]){grid-template-columns:1fr;gap:12px}.weather-forecast-list{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-forecast-list li:last-child:nth-child(odd){grid-column:1/-1}.weather-forecast-condition{min-height:0}}

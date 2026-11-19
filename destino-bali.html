@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#f8fafb">
 <title>Bali · Proyecto SkyTrip</title>
 <link rel="icon" href="assets/logo-emblema.png">
-<link rel="stylesheet" href="styles.css?v=20261021-2">
+<link rel="stylesheet" href="styles.css?v=20261118-1">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -77,9 +77,27 @@
 </div>
 </dl>
 </details>
-<details>
+<details open>
 <summary>Clima y temporada</summary>
-<p>Consulta el pronóstico y las condiciones de la temporada antes de fijar las fechas. Esta versión no consulta información meteorológica en vivo.</p>
+<div class="weather-widget" data-weather-widget data-location-label="Denpasar, Indonesia" data-latitude="-8.6500" data-longitude="115.2167">
+<p class="weather-intro" data-weather-location>Referencia meteorológica para Denpasar, Indonesia. Puedes consultar otra ciudad según tu ruta.</p>
+<p class="weather-status" data-weather-status role="status" aria-live="polite">Consultando las condiciones actuales…</p>
+<button class="weather-retry" type="button" data-weather-retry hidden>Reintentar consulta</button>
+<div class="weather-current" data-weather-current hidden></div>
+<section class="weather-forecast" data-weather-forecast-section hidden aria-labelledby="weather-title-bali">
+<h3 id="weather-title-bali">Pronóstico de 5 días</h3>
+<ul class="weather-forecast-list" data-weather-forecast></ul>
+</section>
+<form class="weather-search" data-weather-search>
+<label for="weather-city-bali">Consultar otra ciudad</label>
+<div>
+<input id="weather-city-bali" name="city" type="search" maxlength="100" autocomplete="off" placeholder="Ej. Medellín, Colombia" required>
+<button class="button small" type="submit" data-weather-search-button>Buscar</button>
+</div>
+<small>Busca una ciudad para ajustar el clima a tu punto de partida.</small>
+</form>
+<p class="weather-attribution">Datos: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Unidades en °C y km/h; descripciones traducidas.</p>
+</div>
 </details>
 <details>
 <summary>Lugares de interés y actividades</summary>
@@ -133,7 +151,8 @@
 <span>© 2026 Proyecto SkyTrip. Todos los derechos reservados.</span>
 <span>Autores: Andrés Tavorda, Eliver Tiapa y Kleiner Madrid</span>
 </div>
-<small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
+<small>Prototipo académico en HTML5, CSS y JavaScript. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
+<script type="module" src="assets/js/destino-clima.js?v=20261118-1"></script>
 </body>
 </html>
