@@ -56,7 +56,7 @@
 <p>Museos, barrios y arquitectura para explorar paso a paso.</p>
 <div class="actions">
 <a class="button" href="itinerario.html">Planear mi viaje ↗</a>
-<a class="button secondary" href="favoritos.html">Elegir favoritos ♡</a>
+<button class="button secondary" type="button" data-favorite="londres" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </div>
 </div>
@@ -123,6 +123,7 @@
 </section>
 <div class="source-note">Referencia del destino: <a href="https://www.visitlondon.com/things-to-do/london-areas/south-bank" target="_blank" rel="noopener noreferrer">Guía oficial de Visit London ↗</a>
 </div>
+<p class="favorite-status" data-favorites-status role="status" aria-live="polite"></p>
 </main>
 <footer>
 <div class="footer-top">
@@ -154,5 +155,6 @@
 <small>Prototipo académico en HTML5, CSS y JavaScript. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
 <script type="module" src="assets/js/destino-clima.js?v=20261118-1"></script>
+<script type="module" src="assets/js/favoritos.js"></script>
 </body>
 </html>

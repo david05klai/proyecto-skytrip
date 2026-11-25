@@ -117,7 +117,7 @@
 </p>
 </div>
 <div class="cards">
-<article class="destination-card playa ">
+<article class="destination-card playa " data-destination="cartagena">
 <a class="card-image" href="destino-cartagena.html">
 <img src="assets/costa.jpg" alt="Paisaje de Cartagena" loading="lazy">
 <span class="badge">Playa y cultura</span>
@@ -130,9 +130,10 @@
 <p>Calles con historia y una idea de viaje junto al Caribe.</p>
 <a class="text-link" href="destino-cartagena.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="cartagena" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card naturaleza ">
+<article class="destination-card naturaleza " data-destination="alpes">
 <a class="card-image" href="destino-alpes.html">
 <img src="assets/montana.jpg" alt="Paisaje de Alpes" loading="lazy">
 <span class="badge">Naturaleza</span>
@@ -145,9 +146,10 @@
 <p>Montañas y lagos para imaginar una ruta a tu propio ritmo.</p>
 <a class="text-link" href="destino-alpes.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="alpes" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card ciudad ">
+<article class="destination-card ciudad " data-destination="londres">
 <a class="card-image" href="destino-londres.html">
 <img src="assets/ciudad.jpg" alt="Paisaje de Londres" loading="lazy">
 <span class="badge">Ciudad y cultura</span>
@@ -160,6 +162,7 @@
 <p>Museos, barrios y arquitectura para explorar paso a paso.</p>
 <a class="text-link" href="destino-londres.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="londres" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
 </div>
@@ -340,5 +343,6 @@
 </div>
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
+<script type="module" src="assets/js/favoritos.js"></script>
 </body>
 </html>

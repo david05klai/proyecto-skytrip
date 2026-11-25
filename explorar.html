@@ -68,7 +68,7 @@
 <label for="aventura">Aventura</label>
 </div>
 <div class="cards">
-<article class="destination-card playa ">
+<article class="destination-card playa " data-destination="cartagena">
 <a class="card-image" href="destino-cartagena.html">
 <img src="assets/costa.jpg" alt="Paisaje de Cartagena" loading="lazy">
 <span class="badge">Playa y cultura</span>
@@ -81,9 +81,10 @@
 <p>Calles con historia y una idea de viaje junto al Caribe.</p>
 <a class="text-link" href="destino-cartagena.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="cartagena" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card naturaleza ">
+<article class="destination-card naturaleza " data-destination="alpes">
 <a class="card-image" href="destino-alpes.html">
 <img src="assets/montana.jpg" alt="Paisaje de Alpes" loading="lazy">
 <span class="badge">Naturaleza</span>
@@ -96,9 +97,10 @@
 <p>Montañas y lagos para imaginar una ruta a tu propio ritmo.</p>
 <a class="text-link" href="destino-alpes.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="alpes" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card ciudad ">
+<article class="destination-card ciudad " data-destination="londres">
 <a class="card-image" href="destino-londres.html">
 <img src="assets/ciudad.jpg" alt="Paisaje de Londres" loading="lazy">
 <span class="badge">Ciudad y cultura</span>
@@ -111,9 +113,10 @@
 <p>Museos, barrios y arquitectura para explorar paso a paso.</p>
 <a class="text-link" href="destino-londres.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="londres" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card naturaleza ">
+<article class="destination-card naturaleza " data-destination="bali">
 <a class="card-image" href="destino-bali.html">
 <img src="assets/bali.jpg" alt="Paisaje de Bali" loading="lazy">
 <span class="badge">Naturaleza y cultura</span>
@@ -126,9 +129,10 @@
 <p>Paisajes tropicales para combinar descanso y recorridos.</p>
 <a class="text-link" href="destino-bali.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="bali" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card naturaleza ">
+<article class="destination-card naturaleza " data-destination="bosque">
 <a class="card-image" href="destino-bosque.html">
 <img src="assets/bosque.jpg" alt="Paisaje de Escapada al bosque" loading="lazy">
 <span class="badge">Naturaleza</span>
@@ -141,9 +145,10 @@
 <p>Un viaje entre árboles y senderos para desconectar.</p>
 <a class="text-link" href="destino-bosque.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="bosque" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
-<article class="destination-card aventura ">
+<article class="destination-card aventura " data-destination="desierto">
 <a class="card-image" href="destino-desierto.html">
 <img src="assets/desierto.jpg" alt="Paisaje de Ruta por el desierto" loading="lazy">
 <span class="badge">Aventura</span>
@@ -156,6 +161,7 @@
 <p>Una propuesta de aventura entre paisajes de arena.</p>
 <a class="text-link" href="destino-desierto.html">Descubrir destino <span class="arrow">↗</span>
 </a>
+<button class="favorite-toggle" type="button" data-favorite="desierto" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </article>
 </div>
@@ -248,5 +254,6 @@
 </div>
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
+<script type="module" src="assets/js/favoritos.js"></script>
 </body>
 </html>

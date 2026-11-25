@@ -52,37 +52,38 @@
 <p>Selecciona los destinos que te interesan para verlos juntos en esta página.</p>
 </section>
 <section class="section compact favorites-page">
-<p class="notice">Selección temporal de esta página. En esta etapa no se guardan favoritos en una cuenta ni entre páginas.</p>
+<p class="notice">Tus destinos favoritos se guardan en este navegador.</p>
+<p data-favorites-status role="status" aria-live="polite"></p>
 <div class="favorite-options">
 <div>
-<input type="checkbox" id="fav-cartagena">
+<input type="checkbox" id="fav-cartagena" value="cartagena">
 <label for="fav-cartagena">♡ Cartagena</label>
 </div>
 <div>
-<input type="checkbox" id="fav-alpes">
+<input type="checkbox" id="fav-alpes" value="alpes">
 <label for="fav-alpes">♡ Alpes</label>
 </div>
 <div>
-<input type="checkbox" id="fav-londres">
+<input type="checkbox" id="fav-londres" value="londres">
 <label for="fav-londres">♡ Londres</label>
 </div>
 <div>
-<input type="checkbox" id="fav-bali">
+<input type="checkbox" id="fav-bali" value="bali">
 <label for="fav-bali">♡ Bali</label>
 </div>
 <div>
-<input type="checkbox" id="fav-bosque">
+<input type="checkbox" id="fav-bosque" value="bosque">
 <label for="fav-bosque">♡ Escapada al bosque</label>
 </div>
 <div>
-<input type="checkbox" id="fav-desierto">
+<input type="checkbox" id="fav-desierto" value="desierto">
 <label for="fav-desierto">♡ Ruta por el desierto</label>
 </div>
 </div>
 <h2>Mi selección</h2>
-<p class="empty-favorites">Todavía no has seleccionado destinos. Marca una opción de arriba para empezar.</p>
+<p class="empty-favorites">Todavía no has seleccionado destinos. Guarda uno desde una tarjeta o marca una opción de arriba.</p>
 <div class="cards favorites-grid">
-<article class="destination-card playa saved-cartagena">
+<article class="destination-card playa saved-cartagena" data-destination="cartagena">
 <a class="card-image" href="destino-cartagena.html">
 <img src="assets/costa.jpg" alt="Paisaje de Cartagena" loading="lazy">
 <span class="badge">Playa y cultura</span>
@@ -97,7 +98,7 @@
 </a>
 </div>
 </article>
-<article class="destination-card naturaleza saved-alpes">
+<article class="destination-card naturaleza saved-alpes" data-destination="alpes">
 <a class="card-image" href="destino-alpes.html">
 <img src="assets/montana.jpg" alt="Paisaje de Alpes" loading="lazy">
 <span class="badge">Naturaleza</span>
@@ -112,7 +113,7 @@
 </a>
 </div>
 </article>
-<article class="destination-card ciudad saved-londres">
+<article class="destination-card ciudad saved-londres" data-destination="londres">
 <a class="card-image" href="destino-londres.html">
 <img src="assets/ciudad.jpg" alt="Paisaje de Londres" loading="lazy">
 <span class="badge">Ciudad y cultura</span>
@@ -127,7 +128,7 @@
 </a>
 </div>
 </article>
-<article class="destination-card naturaleza saved-bali">
+<article class="destination-card naturaleza saved-bali" data-destination="bali">
 <a class="card-image" href="destino-bali.html">
 <img src="assets/bali.jpg" alt="Paisaje de Bali" loading="lazy">
 <span class="badge">Naturaleza y cultura</span>
@@ -142,7 +143,7 @@
 </a>
 </div>
 </article>
-<article class="destination-card naturaleza saved-bosque">
+<article class="destination-card naturaleza saved-bosque" data-destination="bosque">
 <a class="card-image" href="destino-bosque.html">
 <img src="assets/bosque.jpg" alt="Paisaje de Escapada al bosque" loading="lazy">
 <span class="badge">Naturaleza</span>
@@ -157,7 +158,7 @@
 </a>
 </div>
 </article>
-<article class="destination-card aventura saved-desierto">
+<article class="destination-card aventura saved-desierto" data-destination="desierto">
 <a class="card-image" href="destino-desierto.html">
 <img src="assets/desierto.jpg" alt="Paisaje de Ruta por el desierto" loading="lazy">
 <span class="badge">Aventura</span>
@@ -205,5 +206,6 @@
 </div>
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
+<script type="module" src="assets/js/favoritos.js"></script>
 </body>
 </html>

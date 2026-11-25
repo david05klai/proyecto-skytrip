@@ -54,8 +54,8 @@
 <section class="section compact planner-layout">
 <div>
 <h2>Crear viaje</h2>
-<form class="panel-form" action="#plan-validado" method="get">
-<p class="form-note">Puedes completar los campos como ejercicio de planificación. Esta versión no genera ni guarda viajes.</p>
+<form class="panel-form" id="trip-form">
+<p class="form-note">Organiza tus fechas y añade actividades para cada día. El viaje se guardará en este navegador.</p>
 <label for="viaje">Nombre del viaje</label>
 <input id="viaje" required placeholder="Mi próxima aventura" maxlength="100">
 <div class="field-row">
@@ -80,6 +80,8 @@
 </select>
 <div class="field-row">
 <div>
+<label for="viajeros">Número de viajeros</label>
+<input id="viajeros" type="number" min="1" step="1" required value="1">
 <label for="presupuesto">Presupuesto estimado</label>
 <input id="presupuesto" type="number" min="1" step="1" placeholder="Ej. 1500000" required>
 </div>
@@ -95,37 +97,15 @@
 <label for="preferencias">Preferencias y actividades</label>
 <textarea id="preferencias" rows="4" placeholder="Lugares que quieres visitar, ritmo de viaje y necesidades">
 </textarea>
-<button class="button" type="submit">Revisar mis datos ↗</button>
-<p class="notice target-note" id="plan-validado">Campos requeridos completos. Revisa también que el regreso sea posterior al inicio. El viaje no se ha guardado.</p>
+<h3>Actividades por día</h3>
+<p class="form-note">Selecciona las fechas para añadir actividades. Una actividad por línea.</p>
+<div id="trip-days"></div>
+<button class="button" type="submit">Guardar viaje ↗</button>
+<p class="notice" id="trip-message" role="status" aria-live="polite" hidden></p>
 </form>
 </div>
 <aside>
-<div class="side-panel">
-<p class="eyebrow">EJEMPLO DE ORGANIZACIÓN</p>
-<h2>Una ruta de 3 días</h2>
-<p>Ejemplo orientativo; no se genera a partir del formulario.</p>
-<ol class="timeline">
-<li>
-<span>DÍA 01</span>
-<h3>Llegar y ubicarse</h3>
-<p>Traslado, alojamiento y un paseo corto para conocer la zona.</p>
-</li>
-<li>
-<span>DÍA 02</span>
-<h3>Explorar lo esencial</h3>
-<p>Actividad principal, gastronomía local y tiempo libre.</p>
-</li>
-<li>
-<span>DÍA 03</span>
-<h3>Disfrutar y regresar</h3>
-<p>Último recorrido, equipaje y traslado de regreso.</p>
-</li>
-</ol>
-</div>
-<details class="spaced">
-<summary>Viajes guardados</summary>
-<p>Esta versión no almacena itinerarios. El guardado se contempla para una etapa posterior.</p>
-</details>
+<div class="side-panel"><p class="eyebrow">TUS PLANES</p><h2>Viajes guardados</h2><div id="saved-trips"></div></div>
 </aside>
 </section>
 </main>
@@ -158,5 +138,6 @@
 </div>
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
+<script type="module" src="assets/js/itinerario.js"></script>
 </body>
 </html>

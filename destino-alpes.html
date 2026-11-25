@@ -56,7 +56,7 @@
 <p>Montañas y lagos para imaginar una ruta a tu propio ritmo.</p>
 <div class="actions">
 <a class="button" href="itinerario.html">Planear mi viaje ↗</a>
-<a class="button secondary" href="favoritos.html">Elegir favoritos ♡</a>
+<button class="button secondary" type="button" data-favorite="alpes" aria-pressed="false">♡ Guardar en favoritos</button>
 </div>
 </div>
 </div>
@@ -121,6 +121,7 @@
 </aside>
 </div>
 </section>
+<p class="favorite-status" data-favorites-status role="status" aria-live="polite"></p>
 </main>
 <footer>
 <div class="footer-top">
@@ -152,5 +153,6 @@
 <small>Prototipo académico en HTML5, CSS y JavaScript. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
 <script type="module" src="assets/js/destino-clima.js?v=20261118-1"></script>
+<script type="module" src="assets/js/favoritos.js"></script>
 </body>
 </html>

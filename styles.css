@@ -151,3 +151,14 @@ header{position:sticky;top:0;z-index:30;height:88px;min-height:0;padding:0 5%;ga
 .weather-attribution{margin:13px 0 0;color:var(--muted);font-size:9px;line-height:1.5}
 .weather-attribution a{color:var(--blue);text-decoration:underline}
 @media(max-width:760px){.weather-current:not([hidden]){grid-template-columns:1fr;gap:12px}.weather-forecast-list{grid-template-columns:repeat(2,minmax(0,1fr))}.weather-forecast-list li:last-child:nth-child(odd){grid-column:1/-1}.weather-forecast-condition{min-height:0}}
+/* Controles de favoritos e itinerarios */
+[hidden]{display:none!important}
+.favorite-toggle{display:block;margin-top:14px;padding:9px 12px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--blue);font:inherit;font-size:12px;cursor:pointer}
+.favorite-toggle[aria-pressed="true"]{background:#e5f1ff;border-color:var(--blue)}
+.favorite-status{margin:0 7% 25px;color:var(--blue);font-size:13px}
+#trip-days label{display:block}
+#trip-days textarea{display:block;margin-top:8px;font-weight:normal}
+.saved-trip{padding:18px 0;border-top:1px solid var(--line)}
+.saved-trip h3{margin:0 0 8px}
+.saved-trip p{overflow-wrap:anywhere}
+.saved-trip button{margin:8px 8px 0 0;padding:8px 12px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--blue);cursor:pointer}
