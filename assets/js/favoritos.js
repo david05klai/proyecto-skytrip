@@ -6,6 +6,23 @@ const cards = document.querySelectorAll('.favorites-grid .destination-card');
 const empty = document.querySelector('.empty-favorites');
 const status = document.querySelector('[data-favorites-status]');
 
+function updateNavBadges() {
+  const count = getFavorites().length;
+  document.querySelectorAll('nav a[href*="favoritos.html"]').forEach(link => {
+    let badge = link.querySelector('.nav-badge');
+    if (count > 0) {
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'nav-badge';
+        link.appendChild(badge);
+      }
+      badge.textContent = ` (${count})`;
+    } else if (badge) {
+      badge.remove();
+    }
+  });
+}
+
 function render() {
   const favorites = new Set(getFavorites());
   controls.forEach(button => {
@@ -16,6 +33,7 @@ function render() {
   options.forEach(input => { input.checked = favorites.has(input.value); });
   cards.forEach(card => { card.hidden = !favorites.has(card.dataset.destination); });
   if (empty) empty.hidden = favorites.size > 0;
+  updateNavBadges();
 }
 
 document.addEventListener('click', event => {

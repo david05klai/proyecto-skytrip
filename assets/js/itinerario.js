@@ -4,6 +4,7 @@ const form = document.querySelector('#trip-form');
 const list = document.querySelector('#saved-trips');
 const days = document.querySelector('#trip-days');
 const message = document.querySelector('#trip-message');
+const cancelBtn = document.querySelector('#cancel-edit');
 const start = form.elements.inicio;
 const end = form.elements.fin;
 let editingId = null;
@@ -11,6 +12,37 @@ let draftActivities = [];
 
 function dateAtUTC(value) { return Date.parse(`${value}T00:00:00Z`); }
 function showMessage(value) { message.textContent = value; message.hidden = false; }
+
+function formatBudget(amount, currency) {
+  try {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: currency || 'COP',
+      maximumFractionDigits: 0
+    }).format(amount);
+  } catch {
+    return `${amount} ${currency}`;
+  }
+}
+
+function formatDuration(startVal, endVal) {
+  const diff = Math.round((dateAtUTC(endVal) - dateAtUTC(startVal)) / 86400000) + 1;
+  return `${diff} día${diff > 1 ? 's' : ''}`;
+}
+
+function cancelEditing() {
+  editingId = null;
+  draftActivities = [];
+  form.reset();
+  days.replaceChildren();
+  form.querySelector('[type=submit]').textContent = 'Guardar viaje ↗';
+  if (cancelBtn) cancelBtn.hidden = true;
+  showMessage('Edición cancelada.');
+}
+
+if (cancelBtn) {
+  cancelBtn.addEventListener('click', cancelEditing);
+}
 
 function renderDays() {
   days.replaceChildren();
@@ -46,7 +78,7 @@ function renderTrips() {
     const title = document.createElement('h3');
     title.textContent = trip.name;
     const summary = document.createElement('p');
-    summary.textContent = `${trip.destination} · ${trip.start} al ${trip.end} · ${trip.travelers} viajero(s) · ${trip.budget} ${trip.currency}`;
+    summary.textContent = `${trip.destination} · ${trip.start} al ${trip.end} (${formatDuration(trip.start, trip.end)}) · ${trip.travelers} viajero(s) · ${formatBudget(trip.budget, trip.currency)}`;
     const details = document.createElement('details');
     const heading = document.createElement('summary');
     heading.textContent = 'Ver actividades';
@@ -71,6 +103,7 @@ function renderTrips() {
       draftActivities = [...(trip.activities || [])];
       renderDays();
       form.querySelector('[type=submit]').textContent = 'Guardar cambios ↗';
+      if (cancelBtn) cancelBtn.hidden = false;
       form.scrollIntoView({ behavior: 'smooth' });
     });
     const remove = document.createElement('button');
@@ -107,6 +140,7 @@ form.addEventListener('submit', event => {
   };
   if (!trip.name || !saveTrip(trip)) { showMessage('No se pudo guardar el viaje en este navegador.'); return; }
   editingId = null; draftActivities = []; form.reset(); days.replaceChildren();
+  if (cancelBtn) cancelBtn.hidden = true;
   form.querySelector('[type=submit]').textContent = 'Guardar viaje ↗';
   renderTrips(); showMessage('Viaje guardado correctamente.');
 });

@@ -168,6 +168,45 @@
 </div>
 <p class="subtle">Catálogo de muestra. Imágenes ilustrativas; no se consultan disponibilidad ni precios actuales.</p>
 </section>
+<section class="section countries-section" id="countries-section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">CONEXIÓN REST COUNTRIES · DATOS EN VIVO</p>
+<h2>Explora países del <em>mundo</em></h2>
+</div>
+<p>Consulta información actualizada directamente desde internet: banderas oficiales, capitales y continentes de más de 200 países.</p>
+</div>
+<div class="countries-search-bar">
+<div class="search-box">
+<span class="search-icon" aria-hidden="true">🔍</span>
+<input type="search" id="country-search" placeholder="Buscar país por nombre (ej. Colombia, Japón, Francia, Canadá)..." autocomplete="off" aria-label="Buscar país por nombre">
+<button type="button" id="country-search-clear" class="clear-btn" hidden title="Limpiar búsqueda" aria-label="Limpiar búsqueda">✕</button>
+</div>
+</div>
+<div class="region-filters" role="group" aria-label="Filtrar países por región">
+<input type="radio" name="region-filter" id="region-all" value="all" checked>
+<label for="region-all">Todos los continentes</label>
+<input type="radio" name="region-filter" id="region-americas" value="Americas">
+<label for="region-americas">América</label>
+<input type="radio" name="region-filter" id="region-europe" value="Europe">
+<label for="region-europe">Europa</label>
+<input type="radio" name="region-filter" id="region-asia" value="Asia">
+<label for="region-asia">Asia</label>
+<input type="radio" name="region-filter" id="region-africa" value="Africa">
+<label for="region-africa">África</label>
+<input type="radio" name="region-filter" id="region-oceania" value="Oceania">
+<label for="region-oceania">Oceanía</label>
+</div>
+<div class="countries-status" id="countries-status" role="status" aria-live="polite">
+Conectando con REST Countries...
+</div>
+<div class="cards" id="countries-grid">
+<!-- Países cargados dinámicamente mediante la API de REST Countries -->
+</div>
+<div class="load-more-wrap">
+<button type="button" class="button small secondary" id="countries-load-more" hidden>Mostrar más países ▾</button>
+</div>
+</section>
 <section class="section comparison">
 <div class="section-heading">
 <div>
@@ -255,5 +294,6 @@
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
 <script type="module" src="assets/js/favoritos.js"></script>
+<script type="module" src="assets/js/paises.js"></script>
 </body>
 </html>

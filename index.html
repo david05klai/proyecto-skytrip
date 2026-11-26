@@ -167,6 +167,38 @@
 </article>
 </div>
 </section>
+<section class="section home-countries" id="home-countries">
+<div class="section-heading">
+<div>
+<p class="eyebrow">CONEXIÓN REST COUNTRIES · DESTINOS GLOBALES</p>
+<h2>Explora países del <em>mundo</em>
+</h2>
+</div>
+<p>Descubre destinos internacionales con información en vivo: banderas, capitales y regiones de todo el planeta.<br>
+<a class="text-link heading-link" href="explorar.html#countries-section">Ver explorador completo de países ↗</a>
+</p>
+</div>
+<div class="countries-search-bar">
+<div class="search-box">
+<span class="search-icon" aria-hidden="true">🔍</span>
+<input type="search" id="home-country-search" placeholder="Busca un país por nombre (ej. Colombia, Japón, Francia, Canadá)..." autocomplete="off" aria-label="Buscar país en inicio">
+</div>
+</div>
+<div class="home-region-filters" role="group" aria-label="Filtrar por región">
+<button type="button" class="home-region-btn active" data-region="all">Todos</button>
+<button type="button" class="home-region-btn" data-region="Americas">América</button>
+<button type="button" class="home-region-btn" data-region="Europe">Europa</button>
+<button type="button" class="home-region-btn" data-region="Asia">Asia</button>
+<button type="button" class="home-region-btn" data-region="Africa">África</button>
+<button type="button" class="home-region-btn" data-region="Oceania">Oceanía</button>
+</div>
+<div class="countries-status" id="home-countries-status" role="status" aria-live="polite">
+Conectando con REST Countries...
+</div>
+<div class="cards" id="home-countries-grid">
+<!-- Países destacados cargados dinámicamente desde REST Countries -->
+</div>
+</section>
 <section class="section how" id="como-funciona">
  <div class="how-visual">
 <img src="assets/bali.jpg" alt="Paisaje tropical para descubrir en un próximo viaje" loading="lazy">
@@ -344,5 +376,6 @@
 <small>Prototipo académico en HTML5 y CSS. Los enlaces de redes llevan a las plataformas; no son perfiles oficiales de SkyTrip.</small>
 </footer>
 <script type="module" src="assets/js/favoritos.js"></script>
+<script type="module" src="assets/js/paises.js"></script>
 </body>
 </html>
