@@ -47,7 +47,7 @@ def run_tests():
             result('Inicio y publicación',False,exc)
         try:
             page.goto(WEB+'explorar.html#countries-section',wait_until='domcontentloaded',timeout=35000)
-            page.wait_for_function("document.querySelectorAll('#countries-grid .country-card').length > 0",{ 'timeout':45000 })
+            page.wait_for_function("document.querySelectorAll('#countries-grid .country-card').length > 0", timeout=45000)
             page.locator('#country-search').fill('Colombia')
             page.wait_for_timeout(900)
             count=page.locator('#countries-grid .country-card').count()
@@ -76,7 +76,7 @@ def run_tests():
                 form=page.locator('[data-weather-search]')
                 form.locator('input').fill('Madrid')
                 form.locator('[data-weather-search-button]').click()
-                page.wait_for_function("document.querySelector('[data-weather-location]').textContent.includes('Madrid')",{ 'timeout':30000 })
+                page.wait_for_function("document.querySelector('[data-weather-location]').textContent.includes('Madrid')", timeout=30000)
                 result('Geocodificación y búsqueda de ciudad',True,'Madrid encontrado y consultado')
             except Exception as exc:
                 result('Geocodificación y búsqueda de ciudad',False,exc)
