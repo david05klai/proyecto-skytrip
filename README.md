@@ -1,6 +1,6 @@
 # Proyecto SkyTrip
 
-Prototipo académico en HTML5 y CSS con un módulo JavaScript para el clima de los destinos, basado en la definición del proyecto y el mapa del sitio del PDF proporcionado.
+Aplicación académica frontend en HTML5, CSS3 y JavaScript ES Modules con integración REST Countries y Open-Meteo, favoritos persistentes e itinerarios almacenados en localStorage.
 
 ## Autores
 Andrés Tavorda, Eliver Tiapa y Kleiner Madrid.
@@ -47,4 +47,4 @@ Repositorio: https://github.com/david05klai/proyecto-skytrip
 Logo original extraído sin modificaciones de la página 2 del PDF del proyecto. Fotografías de Unsplash, identificadas en assets/SOURCES.md. Video de muestra: Big Buck Bunny, Blender Foundation, CC BY 3.0. Audio: composición instrumental original. Video de sustentación enlazado desde el PDF.
 
 ## Diseño y movimiento
-Cabecera con emblema transparente, menú móvil nativo con details/summary, tipografías locales y composición responsive. Incluye entradas escalonadas, movimiento suave de la imagen principal, hover en botones y tarjetas y revelado al desplazarse cuando el navegador admite animation-timeline. Todas las animaciones son CSS y respetan prefers-reduced-motion. La estructura y las funciones de esta etapa siguen siendo HTML5 y CSS.
+Cabecera con emblema transparente, menú móvil nativo con details/summary, tipografías locales y composición responsive. Incluye entradas escalonadas, movimiento suave de la imagen principal, hover en botones y tarjetas y revelado al desplazarse cuando el navegador admite animation-timeline. Todas las animaciones son CSS y respetan prefers-reduced-motion. La aplicación incorpora módulos JavaScript para las funciones dinámicas.
