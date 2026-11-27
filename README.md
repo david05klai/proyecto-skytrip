@@ -2,6 +2,16 @@
 
 Aplicación académica frontend en HTML5, CSS3 y JavaScript ES Modules con integración REST Countries y Open-Meteo, favoritos persistentes e itinerarios almacenados en localStorage.
 
+## Entrega final del tercer corte
+
+- [PDF de entrega con enlaces, manual del usuario, capturas reales y manual del programador](docs/SkyTrip_Entrega_Corte_3_Final.pdf)
+- [Manual del usuario](docs/manual-usuario.md)
+- [Manual del programador](docs/manual-programador.md)
+- [Capturas verificadas y resultado de pruebas automáticas](docs/capturas/estado_pruebas.json)
+- [Video de sustentación enlazado en el sitio](https://youtu.be/shBnPCukNRo)
+
+El PDF y las capturas se generan a partir de pruebas en navegador Chromium con GitHub Actions ([flujo de verificación](.github/workflows/skytrip-entrega.yml)).
+
 ## Autores
 Andrés Tavorda, Eliver Tiapa y Kleiner Madrid.
 
