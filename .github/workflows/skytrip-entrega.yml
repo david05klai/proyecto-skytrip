@@ -1,0 +1,54 @@
+name: Capturas reales y PDF de entrega SkyTrip
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/skytrip-entrega.yml"
+      - "docs/scripts/generar_entrega.py"
+      - "docs/manual-usuario.md"
+      - "docs/manual-programador.md"
+      - "assets/js/**"
+      - "*.html"
+      - "styles.css"
+
+permissions:
+  contents: write
+
+jobs:
+  generar-entrega:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar Playwright y ReportLab
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright reportlab Pillow
+          python -m playwright install --with-deps chromium
+      - name: Probar web pública y generar PDF con capturas
+        run: python docs/scripts/generar_entrega.py
+      - name: Publicar capturas y PDF en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/capturas docs/SkyTrip_Entrega_Corte_3_Final.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: PDF final y capturas reales automatizadas [skip ci]"
+            git push
+          fi
+      - name: Subir copia a artefactos de GitHub Actions
+        uses: actions/upload-artifact@v4
+        with:
+          name: skytrip-entrega-tercer-corte
+          path: |
+            docs/SkyTrip_Entrega_Corte_3_Final.pdf
+            docs/capturas/
+          if-no-files-found: warn
