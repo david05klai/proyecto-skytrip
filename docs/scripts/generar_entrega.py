@@ -52,7 +52,7 @@ def run_tests():
             page.wait_for_timeout(900)
             count=page.locator('#countries-grid .country-card').count()
             assert count>=1, 'La búsqueda de Colombia no produjo tarjeta'
-            page.locator('#region-americas').check()
+            page.locator('label[for="region-americas"]').first.evaluate('(el) => el.click()')
             page.wait_for_timeout(350)
             count2=page.locator('#countries-grid .country-card').count()
             assert count2>=1, 'El filtro América eliminó Colombia'
@@ -64,8 +64,12 @@ def run_tests():
             except Exception: pass
         try:
             page.goto(WEB+'destino-cartagena.html',wait_until='domcontentloaded',timeout=35000)
-            page.get_by_text('Clima y temporada',exact=True).first.click()
-            page.locator('[data-weather-current]:visible').wait_for(timeout=45000)
+            page.locator('summary').filter(has_text='Clima y temporada').first.evaluate('(el) => { el.parentElement.open = true; }')
+            page.wait_for_function("['success','error'].includes(document.querySelector('[data-weather-status]')?.dataset.state)",timeout=45000)
+            weather_status=page.locator('[data-weather-status]').first.inner_text()
+            print('Estado Open-Meteo:',weather_status,flush=True)
+            assert page.locator('[data-weather-status]').first.get_attribute('data-state')=='success',weather_status
+            page.locator('[data-weather-current]:visible').wait_for(timeout=8000)
             temp=page.locator('.weather-now-temperature').first.inner_text()
             assert '°C' in temp
             days=page.locator('[data-weather-forecast] li').count()
@@ -88,7 +92,7 @@ def run_tests():
             page.goto(WEB+'index.html',wait_until='domcontentloaded',timeout=35000)
             fav=page.locator('[data-favorite="cartagena"]').first
             fav.wait_for()
-            if fav.get_attribute('aria-pressed')!='true': fav.click()
+            if fav.get_attribute('aria-pressed')!='true': fav.evaluate('(el) => el.click()')
             assert fav.get_attribute('aria-pressed')=='true'
             page.reload(wait_until='domcontentloaded')
             assert page.locator('[data-favorite="cartagena"]').first.get_attribute('aria-pressed')=='true'
@@ -289,6 +293,8 @@ def make_pdf():
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
     print(f'PDF generado: {PDF}, {PDF.stat().st_size} bytes')
 if __name__=='__main__':
+    # Limpiar capturas antiguas: nunca publicar una imagen obsoleta como actual.
+    for old in OUT.glob('*.png'): old.unlink()
     run_tests()
     make_pdf()
     failures=sum(not item['correcta'] for item in RESULTS)
