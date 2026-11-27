@@ -1,0 +1,42 @@
+[
+  {
+    "prueba": "Inicio y publicación",
+    "correcta": true,
+    "detalle": "Inicio · Proyecto SkyTrip"
+  },
+  {
+    "prueba": "REST Countries, búsqueda y región",
+    "correcta": false,
+    "detalle": "Locator.check: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"#region-americas\")\n    - locator resolved to <input type=\"radio\" value=\"Americas\" name=\"region-filter\" id=\"region-americas\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scr"
+  },
+  {
+    "prueba": "Open-Meteo, temperatura y pronóstico",
+    "correcta": false,
+    "detalle": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-weather-current]:visible\") to be visible\n"
+  },
+  {
+    "prueba": "Favoritos + persistencia localStorage",
+    "correcta": false,
+    "detalle": "Locator.click: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-favorite=\\\"cartagena\\\"]\").first\n    - locator resolved to <button type=\"button\" aria-pressed=\"false\" class=\"favorite-toggle\" data-favorite=\"cartagena\">♡ Guardar en favoritos</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and st"
+  },
+  {
+    "prueba": "Crear itinerario y conservarlo",
+    "correcta": true,
+    "detalle": "Viaje guardado con actividades, visible tras recargar"
+  },
+  {
+    "prueba": "Editar itinerario",
+    "correcta": true,
+    "detalle": "Edición conservada"
+  },
+  {
+    "prueba": "Eliminar itinerario",
+    "correcta": true,
+    "detalle": "Eliminación confirmada"
+  },
+  {
+    "prueba": "Diseño móvil",
+    "correcta": true,
+    "detalle": "Captura real de 390 × 844 píxeles"
+  }
+]
