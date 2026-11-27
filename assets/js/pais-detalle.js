@@ -16,8 +16,8 @@ async function request(url) {
 async function main() {
   if (!/^[A-Z]{2}$/.test(code || '')) { status.textContent = 'Código de país inválido.'; weatherStatus.textContent = ''; return; }
   try {
-    const [country] = await request('https://restcountries.com/v3.1/alpha/' + code + '?fields=name,capital,region,subregion,population,languages,currencies,flags,latlng,capitalInfo,translations');
-    const data = country || {};
+    const result = await request('https://restcountries.com/v3.1/alpha/' + code + '?fields=name,capital,region,subregion,population,languages,currencies,flags,latlng,capitalInfo,translations');
+    const data = Array.isArray(result) ? result[0] : result;
     const name = data.translations?.spa?.common || data.name?.common || code;
     title.textContent = name; document.title = name + ' · SkyTrip';
     status.textContent = 'Información obtenida de REST Countries.';
