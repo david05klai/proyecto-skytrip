@@ -258,7 +258,11 @@ function createCountryCard(country) {
   wikiLink.rel = 'noopener noreferrer';
   wikiLink.innerHTML = 'Conoce más en Wikipedia <span class="arrow">↗</span>';
 
-  body.append(location, title, infoList, wikiLink);
+  const detail = document.createElement('a');
+  detail.className = 'button small';
+  detail.href = `pais-detalle.html?code=${encodeURIComponent(country.code)}`;
+  detail.textContent = 'Ver ficha y clima ↗';
+  body.append(location, title, infoList, detail, wikiLink);
   card.append(imageWrap, body);
   return card;
 }
