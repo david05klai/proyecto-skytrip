@@ -7,6 +7,14 @@ const message = document.querySelector('#trip-message');
 const cancelBtn = document.querySelector('#cancel-edit');
 const start = form.elements.inicio;
 const end = form.elements.fin;
+const requestedDestination = new URLSearchParams(location.search).get('destino');
+if (requestedDestination && requestedDestination.length <= 100) {
+  const option = document.createElement('option');
+  option.value = requestedDestination;
+  option.textContent = requestedDestination;
+  form.elements.destino.append(option);
+  form.elements.destino.value = requestedDestination;
+}
 let editingId = null;
 let draftActivities = [];
 
@@ -95,6 +103,9 @@ function renderTrips() {
       form.elements.viaje.value = trip.name;
       start.value = trip.start;
       end.value = trip.end;
+      if (![...form.elements.destino.options].some(option => option.value === trip.destination)) {
+        form.elements.destino.add(new Option(trip.destination, trip.destination));
+      }
       form.elements.destino.value = trip.destination;
       form.elements.viajeros.value = trip.travelers;
       form.elements.presupuesto.value = trip.budget;
