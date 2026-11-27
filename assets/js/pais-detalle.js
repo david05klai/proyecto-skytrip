@@ -1,3 +1,4 @@
+import { fetchCountries } from './paises.js';
 const title = document.querySelector('#country-title');
 const status = document.querySelector('#country-status');
 const weatherStatus = document.querySelector('#weather-status');
@@ -16,9 +17,10 @@ async function request(url) {
 async function main() {
   if (!/^[A-Z]{2}$/.test(code || '')) { status.textContent = 'Código de país inválido.'; weatherStatus.textContent = ''; return; }
   try {
-    const result = await request('https://restcountries.com/v3.1/alpha/' + code + '?fields=name,capital,region,subregion,population,languages,currencies,flags,latlng,capitalInfo,translations');
-    const data = Array.isArray(result) ? result[0] : result;
-    const name = data.translations?.spa?.common || data.name?.common || code;
+    const country = (await fetchCountries()).find(item => item.code === code);
+    if (!country) throw new Error('País no encontrado');
+    const data = country.raw;
+    const name = country.displayName;
     title.textContent = name; document.title = name + ' · SkyTrip';
     status.textContent = 'Información obtenida de REST Countries.';
     const flag = document.querySelector('#country-flag');
