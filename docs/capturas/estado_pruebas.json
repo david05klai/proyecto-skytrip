@@ -6,18 +6,23 @@
   },
   {
     "prueba": "REST Countries, búsqueda y región",
-    "correcta": false,
-    "detalle": "Locator.check: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"#region-americas\")\n    - locator resolved to <input type=\"radio\" value=\"Americas\" name=\"region-filter\" id=\"region-americas\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scr"
+    "correcta": true,
+    "detalle": "1 tarjeta(s) al buscar Colombia y filtrar América"
   },
   {
     "prueba": "Open-Meteo, temperatura y pronóstico",
-    "correcta": false,
-    "detalle": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-weather-current]:visible\") to be visible\n"
+    "correcta": true,
+    "detalle": "Temperatura 28°C; 5 días"
+  },
+  {
+    "prueba": "Geocodificación y búsqueda de ciudad",
+    "correcta": true,
+    "detalle": "Madrid encontrado y consultado"
   },
   {
     "prueba": "Favoritos + persistencia localStorage",
-    "correcta": false,
-    "detalle": "Locator.click: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-favorite=\\\"cartagena\\\"]\").first\n    - locator resolved to <button type=\"button\" aria-pressed=\"false\" class=\"favorite-toggle\" data-favorite=\"cartagena\">♡ Guardar en favoritos</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and st"
+    "correcta": true,
+    "detalle": "Cartagena permanece guardada después de recargar"
   },
   {
     "prueba": "Crear itinerario y conservarlo",
